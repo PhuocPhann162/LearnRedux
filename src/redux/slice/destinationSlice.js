@@ -30,8 +30,11 @@ export const destinationSlice = createSlice({
     detailDestination: (state, action) => {
       state.destinationSelected = action.payload;
     },
+    resetDestination: (state) => {
+      state.destinationSelected = undefined;
+    },
   },
 });
 
-export const { detailDestination } = destinationSlice.actions;
+export const { detailDestination, resetDestination } = destinationSlice.actions;
 export const destinationReducer = destinationSlice.reducer;
