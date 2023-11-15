@@ -15,12 +15,12 @@ export const counterSlice = createSlice({
       state.count -= 1;
     },
 
-    incrementMultiplier: (state, actions) => {
-      state.count += parseInt(actions.payload);
+    incrementMultiplier: (state, action) => {
+      state.count += Number(action.payload);
     },
 
-    decrementMultiplier: (state, actions) => {
-      state.count -= parseInt(actions.payload);
+    decrementMultiplier: (state, action) => {
+      state.count -= Number(action.payload);
     },
   },
 });

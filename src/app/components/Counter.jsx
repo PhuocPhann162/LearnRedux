@@ -6,7 +6,7 @@ import { incrementMultiplier, decrementMultiplier } from "../../redux/slice/coun
 function Counter() {
   const count = useSelector((state) => state.counterStore.count);
   const dispatch = useDispatch();
-  const [inputMulState, setInputMulState] = useState("");
+  const [inputMulState, setInputMulState] = useState(10);
 
   return (
     <div
